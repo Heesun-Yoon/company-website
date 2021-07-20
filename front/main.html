@@ -10,10 +10,11 @@
 
     <!-- css -->
     <style>    
-        @media(max-width:768px){
-            /* 모바일에 사용될 css */
+        /* @media(max-width:768px){
             header{display:flex; flex:0.03;}
-        }
+            #tablet{display: none;}
+            #pc{display: none;}
+        } */
 
         html,body {
             margin: 0;
@@ -28,59 +29,114 @@
 
         #wrap {
             width: 70%;
-            height: 350%;
+            height: 300%;
             display: flex;
             flex-direction: column;
             margin: 0 auto;
             overflow: auto;
         }
 
+        @media(max-width:768px){
+            #wrap {
+                width: 70%;
+                height: 150%;
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                overflow: auto;
+            }
+        }
+
         header {
             background-color: #aaa;
             display: flex;
-            flex: 0.07;
-            /* width: 100%;
-            height: 100px; */
+            flex: 0.05;
+        }
+
+        @media(max-width:768px){
+            header {
+                background-color: #aaa;
+                display: flex;
+                flex: 0.02;
+            }
         }
 
         #slide_section {
             background-color: #bbb;
             display: flex;
-            flex: 0.3;
-            /* width: 100%;
-            height: 500px; */
+            flex: 0.20;
+        }
+
+        @media(max-width:768px){
+            #slide_section {
+                background-color: #bbb;
+                display: flex;
+                flex: 0.10;
+            }
         }
 
         #images_section1 {
             background-color: #ccc;
             display: flex;
-            flex: 0.3;
+            flex: 0.22;
             /* width: 100%;
             height: 500px; */
+        }
+
+        @media(max-width:768px){
+            #images_section1 {
+                background-color: #ccc;
+                display: flex;
+                flex: 0.11;
+            }
         }
 
         #images_section2 {
             background-color: #ddd;
             display: flex;
-            flex: 0.3;
+            flex: 0.25;
             /* width: 100%;
             height: 500px; */
+        }
+
+        @media(max-width:768px){
+            #images_section2 {
+                background-color: #ddd;
+                display: flex;
+                flex: 0.12;
+            }
         }
 
         #images_section3 {
             background-color: #eee;
             display: flex;
-            flex: 0.3;
+            flex: 0.22;
             /* width: 100%;
             height: 500px; */
+        }
+
+        @media(max-width:768px){
+            #images_section3 {
+                background-color: #eee;
+                display: flex;
+                flex: 0.11;
+            }
         }
 
         footer {
             background-color: #fff;
             display: flex;
-            flex: 0.1;
+            flex: 0.06;
             /* width: 100%;
             height: 200px; */
+        }
+
+        @media(max-width:768px){
+            footer {
+            background-color: #fff;
+            display: flex;
+            flex: 0.03;
+        }
         }
     </style>
 
@@ -92,7 +148,6 @@
         <!-- 헤더 시작 -->
         <header>
         <!-- 헤더 끝 -->
-        <p>test</p>
         </header>
 
         <!-- 슬라이드 섹션 시작 -->
