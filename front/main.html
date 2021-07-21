@@ -154,6 +154,11 @@
             text-align: left;
         }
 
+        #drop_down {
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+
         #top_menu ul {
             display: flex;
             flex-direction: row;
@@ -191,20 +196,25 @@
             position: relative;
         }
 
-
-        #top_menu ul li #sub_menu {
+        /* 하위메뉴 ol */
+        #top_menu ul .top_menu_li #sub_menu {
             border: 3px solid black;
             width: 10%;
             position: absolute;
-            top: -0.01%;
+            top: 10%;
             left: 32.7%;
+            list-style: none;
+            z-index: 1;
+            background-color: white;
         }
 
-        #top_menu ul li #sub_menu li {
-            border: 3px solid red;
-            width: 40%;
+        /* 하위메뉴 li */
+        #top_menu ul .top_menu_li #sub_menu li {
+            /* border: 3px solid red; */
+            width: 100%;
             height: 20%;
-            display: inline-block;
+            margin-bottom: 3px;
+            border-bottom: 1px solid #aaa;
         }
 
 
@@ -226,9 +236,9 @@
             <!-- 상단메뉴 -->
             <nav id="top_menu">
                 <ul>
-                    <li class="top_menu_li"><a href="#" class="top_menu_link" id="top_menu_1">제품정보</a>
+                    <li class="top_menu_li"><a href="#" class="top_menu_link" id="top_menu_1">제품정보 <span id="drop_down">∨</span></a>
                         <!-- 제품정보 하위메뉴 -->
-                        <ul id="sub_menu">
+                        <ol id="sub_menu">
                             <li><a href="#" class="sub_menu_link">UV실사유리</a></li>
                             <li><a href="#" class="sub_menu_link">유리대리석</a></li>
                             <li><a href="#" class="sub_menu_link">UV칼라유리</a></li>
@@ -236,7 +246,7 @@
                             <li><a href="#" class="sub_menu_link">거울</a></li>
                             <li><a href="#" class="sub_menu_link">사틴유리</a></li>
                             <li><a href="#" class="sub_menu_link">유리칠판</a></li>
-                        </ul>
+                        </ol>
                     </li>
                     <li class="top_menu_li"><a href="#" class="top_menu_link">시공갤러리</a></li>
                     <li class="top_menu_li"><a href="#" class="top_menu_link">UV프린팅</a></li>
