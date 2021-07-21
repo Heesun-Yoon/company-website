@@ -163,7 +163,7 @@
             justify-content: space-evenly;
         }
 
-        #top_menu ul li{
+        #top_menu ul .top_menu_li{
             /* border: 1px solid black; */
             /* background-color: #eee; */
             width: 12%;
@@ -176,15 +176,37 @@
             padding: 0 0 2px 7px;
         }
 
-        #top_menu ul li:hover {
+        #top_menu ul .top_menu_li:hover {
             font-weight: bold;
             border-left: 2px solid black;
         }
 
-        #top_menu .top_menu_link {
+        #top_menu .top_menu_link,
+        #sub_menu .sub_menu_link {
             text-decoration: none;
             color: black;
         }
+
+        #top_menu_1 {
+            position: relative;
+        }
+
+
+        #top_menu ul li #sub_menu {
+            border: 3px solid black;
+            width: 10%;
+            position: absolute;
+            top: -0.01%;
+            left: 32.7%;
+        }
+
+        #top_menu ul li #sub_menu li {
+            border: 3px solid red;
+            width: 40%;
+            height: 20%;
+            display: inline-block;
+        }
+
 
 
 
@@ -204,11 +226,22 @@
             <!-- 상단메뉴 -->
             <nav id="top_menu">
                 <ul>
-                    <li><a href="#" class="top_menu_link">제품정보</a></li>
-                    <li><a href="#" class="top_menu_link">시공갤러리</a></li>
-                    <li><a href="#" class="top_menu_link">UV프린팅</a></li>
-                    <li><a href="#" class="top_menu_link">문의</a></li>
-                    <li><a href="#" class="top_menu_link">CONTACT US</a></li>
+                    <li class="top_menu_li"><a href="#" class="top_menu_link" id="top_menu_1">제품정보</a>
+                        <!-- 제품정보 하위메뉴 -->
+                        <ul id="sub_menu">
+                            <li><a href="#" class="sub_menu_link">UV실사유리</a></li>
+                            <li><a href="#" class="sub_menu_link">유리대리석</a></li>
+                            <li><a href="#" class="sub_menu_link">UV칼라유리</a></li>
+                            <li><a href="#" class="sub_menu_link">백페인트글라스</a></li>
+                            <li><a href="#" class="sub_menu_link">거울</a></li>
+                            <li><a href="#" class="sub_menu_link">사틴유리</a></li>
+                            <li><a href="#" class="sub_menu_link">유리칠판</a></li>
+                        </ul>
+                    </li>
+                    <li class="top_menu_li"><a href="#" class="top_menu_link">시공갤러리</a></li>
+                    <li class="top_menu_li"><a href="#" class="top_menu_link">UV프린팅</a></li>
+                    <li class="top_menu_li"><a href="#" class="top_menu_link">문의</a></li>
+                    <li class="top_menu_li"><a href="#" class="top_menu_link">CONTACT US</a></li>
                 </ul>
             </nav>
         <!-- 헤더 끝 -->
