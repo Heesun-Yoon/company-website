@@ -7,19 +7,26 @@
     <title>Main</title>
 
     <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet"> -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    
 
     <!-- css -->
     <style>    
+        /* 폰트 (나눔스퀘어) */
+        .nanumsquare {
+            font-family: 'NanumSquare', sans-serif !important;
+        }
 
         /* 구조 태그 css */
         html,body {
             margin: 0;
             width: 100%;
             height: 100%;
-            font-family: 'Gothic A1', sans-serif;
+            /* font-family: 'Gothic A1', sans-serif; */
         }
 
         body {
@@ -29,7 +36,7 @@
 
         #wrap {
             /* background-color:white; */
-            width: 70%;
+            width: 100%;
             height: 300%;
             display: flex;
             flex-direction: column;
@@ -49,10 +56,10 @@
         }
 
         header {
-            border: 1px solid #aaa;
+            border-bottom: 3px solid #004A98;
             /* background-color: #F2F2F2; */
             display: flex;
-            flex: 0.045;
+            flex: 0.04;
         }
 
         @media(max-width:768px){
@@ -141,7 +148,7 @@
 
         /* 그 외 태그 css */
         #logo {
-            width: 13%;
+            width: 9%;
             /* 상 우 하 좌 */
             margin: 8px 0px 8px 60px;
         }
@@ -164,7 +171,7 @@
             flex-direction: row;
             height: 20%;
             margin: 0;
-            margin-top: 5%;
+            margin-top: 3.5%;
             justify-content: space-evenly;
         }
 
@@ -183,7 +190,7 @@
 
         #top_menu ul .top_menu_li:hover {
             font-weight: bold;
-            border-left: 2px solid black;
+            border-left: 3px solid black;
         }
 
         #top_menu .top_menu_link,
@@ -198,14 +205,16 @@
 
         /* 하위메뉴 ol */
         #top_menu ul .top_menu_li #sub_menu {
-            border: 3px solid black;
+            border: 1px solid #eee;
             width: 10%;
             position: absolute;
             top: 10%;
-            left: 32.7%;
+            left: 19.3%;
             list-style: none;
             z-index: 1;
             background-color: white;
+            padding: 10px;
+            background-color: #f0f0f0;
         }
 
         /* 하위메뉴 li */
@@ -216,6 +225,13 @@
             margin-bottom: 3px;
             border-bottom: 1px solid #aaa;
         }
+
+        #top_menu ul .top_menu_li #sub_menu li:hover {
+            color: #004A98;
+        }
+
+
+
 
 
 
@@ -236,7 +252,9 @@
             <!-- 상단메뉴 -->
             <nav id="top_menu">
                 <ul>
-                    <li class="top_menu_li"><a href="#" class="top_menu_link" id="top_menu_1">제품정보 <span id="drop_down">∨</span></a>
+                    <li class="top_menu_li"><a href="#" class="top_menu_link" id="top_menu_1">제품정보 
+                        <!-- <span id="drop_down">∨</span> -->
+                    </a>
                         <!-- 제품정보 하위메뉴 -->
                         <ol id="sub_menu">
                             <li><a href="#" class="sub_menu_link">UV실사유리</a></li>
