@@ -56,7 +56,8 @@
         }
 
         header {
-            border-bottom: 3px solid #004A98;
+            /* border-bottom: 2px solid #004A98; */
+            border-bottom: 2px solid #003670;
             /* background-color: #F2F2F2; */
             display: flex;
             flex: 0.04;
@@ -184,14 +185,19 @@
             font-size: 1.2em;
             color: black;
             line-height: 180%;
+            /* border-left: 2px solid #aaa; */
+            padding: 0 0 2px 7px;
+        }
+
+        #top_menu ul .top_menu_li > a{
             border-left: 2px solid #aaa;
             padding: 0 0 2px 7px;
         }
 
-        #top_menu ul .top_menu_li:hover {
+         #top_menu ul .top_menu_li > a:hover {
             font-weight: bold;
             border-left: 3px solid black;
-        }
+        } 
 
         #top_menu .top_menu_link,
         #sub_menu .sub_menu_link {
@@ -226,19 +232,48 @@
             border-bottom: 1px solid #aaa;
         }
 
-        #top_menu ul .top_menu_li #sub_menu li:hover {
-            color: #004A98;
+        #top_menu ul .top_menu_li #sub_menu .sub_menu_link:hover {
+            color: #003670;            
+            font-weight: bold;
         }
 
+        /* 제품정보 > 하위메뉴 숨김 */
+        #top_menu ul .top_menu_li #sub_menu {
+            display: none;
+        }
 
-
-
-
-
+        
 
 
 
     </style>
+
+    <!-- jquery import -->
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+    <script>
+        // js 
+        // 제품정보 > 하위메뉴 클릭시 펼침 (부드럽게)
+        // $(document).ready(function(){
+        //     $("#top_menu_1").click(function(){
+        //         var submenu = $(this).next("ol");
+        //         if(submenu.is(":visible")){
+        //             submenu.slideUp(300);
+        //         }else{
+        //             submenu.slideDown(300);
+        //         }
+        //     });
+        // });
+
+        $(document).ready(function(){
+            $("#top_menu_1").click(function(){
+                $(this).next("ol").toggleClass("hide");
+            });
+        });
+
+
+
+    </script>    
 
 </head>
 <body>
