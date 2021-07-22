@@ -72,7 +72,7 @@
         }
 
         #slide_section {
-            border: 1px solid #aaa;
+            /* border: 1px solid #aaa; */
             /* background-color: #bbb; */
             display: flex;
             flex: 0.20;
@@ -149,9 +149,9 @@
 
         /* 그 외 태그 css */
         #logo {
-            width: 9%;
+            width: 7%;
             /* 상 우 하 좌 */
-            margin: 8px 0px 8px 60px;
+            margin: 8px 0px 8px 100px;
         }
 
         #top_menu {
@@ -172,7 +172,7 @@
             flex-direction: row;
             height: 20%;
             margin: 0;
-            margin-top: 3.5%;
+            margin-top: 2.5%;
             justify-content: space-evenly;
         }
 
@@ -214,8 +214,8 @@
             border: 1px solid #eee;
             width: 10%;
             position: absolute;
-            top: 10%;
-            left: 19.3%;
+            top: 8.5%;
+            left: 19.9%;
             list-style: none;
             z-index: 1;
             background-color: white;
@@ -242,6 +242,10 @@
             display: none;
         }
 
+        #slide_imgs {
+            opacity: 0.8;
+        }
+
 
 
 
@@ -253,16 +257,16 @@
     <script>
         // js 
         // 제품정보 > 하위메뉴 클릭시 펼침 (부드럽게)
-        $(document).ready(function(){
-            $("#top_menu_1").click(function(){
-                var submenu = $(this).next("ol");
-                if(submenu.is(":visible")){
-                    submenu.slideUp(300);
-                }else{
-                    submenu.slideDown(300);
-                }
-            });
-        });
+        // $(document).ready(function(){
+        //     $("#top_menu_1").click(function(){
+        //         var submenu = $(this).next("ol");
+        //         if(submenu.is(":visible")){
+        //             submenu.slideUp(300);
+        //         }else{
+        //             submenu.slideDown(300);
+        //         }
+        //     });
+        // });
 
         // $(document).ready(function(){
         //     $("#top_menu_1").click(function(){
@@ -272,12 +276,12 @@
         // });
 
         // 딱딱 나옴!
-        // $(function(){
-        //     $('#sub_menu').hide();
-        //     $('#top_menu_1').click(function(){
-        //         $('#sub_menu').toggle();
-        //     });
-        // });
+        $(function(){
+            $('#sub_menu').hide();
+            $('#top_menu_1').click(function(){
+                $('#sub_menu').toggle();
+            });
+        });
 
 
 
@@ -333,6 +337,9 @@
 
         <!-- 슬라이드 섹션 시작 -->
         <div id="slide_section">
+            <div id="slide_imgs">
+                <img src="D:\company-website\images\ex1_1.png" id="slide_img1" class="slide_img">
+            </div>
         <!-- 슬라이드 섹션 끝 -->
         </div>
 
