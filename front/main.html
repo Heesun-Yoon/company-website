@@ -242,7 +242,6 @@
             display: none;
         }
 
-        
 
 
 
@@ -254,22 +253,44 @@
     <script>
         // js 
         // 제품정보 > 하위메뉴 클릭시 펼침 (부드럽게)
+        $(document).ready(function(){
+            $("#top_menu_1").click(function(){
+                var submenu = $(this).next("ol");
+                if(submenu.is(":visible")){
+                    submenu.slideUp(300);
+                }else{
+                    submenu.slideDown(300);
+                }
+            });
+        });
+
+        // $(document).ready(function(){
+        //     $("#top_menu_1").click(function(){
+        //         alert('click');
+        //         $("#sub_menu").show();
+        //     });
+        // });
+
+        // 딱딱 나옴!
+        // $(function(){
+        //     $('#sub_menu').hide();
+        //     $('#top_menu_1').click(function(){
+        //         $('#sub_menu').toggle();
+        //     });
+        // });
+
+
+
         // $(document).ready(function(){
         //     $("#top_menu_1").click(function(){
         //         var submenu = $(this).next("ol");
         //         if(submenu.is(":visible")){
-        //             submenu.slideUp(300);
+        //         $(this).next("ol").toggleClass("display");
         //         }else{
-        //             submenu.slideDown(300);
+        //         $(this).next("ol").toggleClass("display");
         //         }
         //     });
         // });
-
-        $(document).ready(function(){
-            $("#top_menu_1").click(function(){
-                $(this).next("ol").toggleClass("hide");
-            });
-        });
 
 
 
