@@ -87,8 +87,8 @@
         }
 
         #images_section1 {
-            border: 1px solid #aaa;
-            background-color: #ccc;
+            /* border: 1px solid #aaa; */
+            /* background-color: #ccc; */
             display: flex;
             flex: 0.22;
         }
@@ -249,7 +249,7 @@
         #slide_imgs {
             /* #slide_section width*이미지 개수 */
             width: 7600px;
-            opacity: 0.8;
+            /* opacity: 0.8; */
             position: relative;
             display: flex;
             flex-direction: row;
@@ -273,8 +273,8 @@
             /* border: 1px solid black; */
             width: 70px;
             height: 10%;
-            position: absolute;
-            top: 40%;
+            /* position: absolute;
+            top: 40%; */
             cursor: pointer;
         }
 
@@ -283,9 +283,9 @@
             /* border: 1px solid black; */
             width: 70px;
             height: 10%;
-            position: absolute;
+            /* position: absolute;
             top: 40%;
-            left: 96%;
+            left: 96%; */
             cursor: pointer;
         }
 
@@ -308,15 +308,64 @@
         .slide_img {
             max-width: 100%;
             height: auto;
+            cursor: pointer;
+            opacity: 0.8;
         }
 
-
+        .slide_img:hover{
+            opacity: initial;
+        }
 
         /* 각 이미지의 width는 #slide_section width와 같아야함 */
         /* .slide_img {
             max-width: 1700px;
             height: auto;
         } */
+
+        #images_section1 {
+            padding-left: 30px;
+        }
+
+        .images_sec {
+            border: 3px solid black;
+            width: 380px;
+            height: 500px;
+            margin: 60px 50px 0 30px;
+            cursor: pointer;
+        }
+
+        .images_sec:hover {
+            transform: scale(1.1);
+            transition: transform 1s;
+        }
+
+        #img_sec2_1 {
+            /* border: 1px solid black; */
+            width: 1000px;
+            height: 660px;
+            /* margin: 0 auto; */
+            margin-top: 25px;
+            margin-left: 30px;
+        }
+
+        #img_sec2_1 > img  {
+            width: 1000px;
+            height: 660px;
+        }
+
+        #img_sec3_1 {
+            width: 1000px;
+            height: 660px;
+            /* margin: 0 auto; */
+            margin-top: 25px;
+            margin-left: 800px;
+        }
+
+        #img_sec3_1 > img  {
+            width: 1000px;
+            height: 600px;
+        }
+
 
 
 
@@ -421,16 +470,22 @@
 
         <!-- 이미지 섹션1 시작 -->
         <div id="images_section1">
+            <div id="img_sec_1" class="images_sec"><img src="D:\company-website\images\color1.png"></div>
+            <div id="img_sec_2" class="images_sec"><img src="D:\company-website\images\color2.png"></div>
+            <div id="img_sec_3" class="images_sec"><img src="D:\company-website\images\color3.png"></div>
+            <div id="img_sec_4" class="images_sec"><img src="D:\company-website\images\color4.png"></div>
         <!-- 이미지 섹션1 끝 -->
         </div>
 
         <!-- 이미지 섹션2 시작 -->
         <div id="images_section2">
+            <div id="img_sec2_1" class="images_sec2"><img src="D:\company-website\images\section2.png"></div>
         <!-- 이미지 섹션2 끝 -->
         </div>
 
         <!-- 이미지 섹션3 시작 -->
         <div id="images_section3">
+            <div id="img_sec3_1" class="images_sec3"><img src="D:\company-website\images\section3.png"></div>
         <!-- 이미지 섹션3 끝 -->
         </div>
 
