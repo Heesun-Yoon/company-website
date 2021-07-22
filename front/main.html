@@ -88,7 +88,7 @@
 
         #images_section1 {
             border: 1px solid #aaa;
-            /* background-color: #ccc; */
+            background-color: #ccc;
             display: flex;
             flex: 0.22;
         }
@@ -242,10 +242,81 @@
             display: none;
         }
 
-        #slide_imgs {
-            opacity: 0.8;
+        #slide_section{
+            width: 1900px;
         }
 
+        #slide_imgs {
+            /* #slide_section width*이미지 개수 */
+            width: 7600px;
+            opacity: 0.8;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            animation: slide 15s infinite;
+        }
+
+        @keyframes slide {
+            0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+            10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+            25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+            35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+            50% {margin-left:-200%;}
+            60% {margin-left:-200%;}
+            75% {margin-left:-300%;}
+            85% {margin-left:-300%;}
+            100% {margin-left:0;}
+        }
+
+        #left_btn {
+            /* border: 1px solid black; */
+            width: 70px;
+            height: 10%;
+            position: absolute;
+            top: 40%;
+            cursor: pointer;
+        }
+
+
+        #right_btn {
+            /* border: 1px solid black; */
+            width: 70px;
+            height: 10%;
+            position: absolute;
+            top: 40%;
+            left: 96%;
+            cursor: pointer;
+        }
+
+        #left_btn_img {
+            /* border: 1px solid red; */
+            /* width: 50%; */
+            width: 100%;
+            /* height: 100%; */
+            /* z-index: 1; */
+        }
+
+        #right_btn_img {
+            /* border: 1px solid red; */
+            /* width: 50%; */
+            width: 100%;
+            /* z-index: 1; */
+        }
+
+        /* 이미지 크기 반응형 */
+        .slide_img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+        /* 각 이미지의 width는 #slide_section width와 같아야함 */
+        /* .slide_img {
+            max-width: 1700px;
+            height: auto;
+        } */
 
 
 
@@ -338,7 +409,12 @@
         <!-- 슬라이드 섹션 시작 -->
         <div id="slide_section">
             <div id="slide_imgs">
+                <div id="left_btn"><img src="D:\company-website\images\left_btn.png" id="left_btn_img"></div>
                 <img src="D:\company-website\images\ex1_1.png" id="slide_img1" class="slide_img">
+                <img src="D:\company-website\images\ex2_1.png" id="slide_img2" class="slide_img">
+                <img src="D:\company-website\images\ex3_1.png" id="slide_img3" class="slide_img">
+                <img src="D:\company-website\images\ex4_1.png" id="slide_img4" class="slide_img">
+                <div id="right_btn"><img src="D:\company-website\images\right_btn.png" id="right_btn_img"></div> 
             </div>
         <!-- 슬라이드 섹션 끝 -->
         </div>
