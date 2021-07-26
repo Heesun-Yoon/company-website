@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 
 
+
     <!--   
         수정사항
         1. 하위메뉴 animation으로 부드럽게 수정
@@ -26,7 +27,7 @@
      -->
 
     <!-- css -->
-    <style>    
+    <style type="text/css">    
         /* 폰트 (나눔스퀘어) */
         .nanumsquare {
             font-family: 'NanumSquare', sans-serif !important;
@@ -257,7 +258,7 @@
             width: 1900px;
         }
 
-        #slide_imgs {
+        .slide_imgs {
             /* #slide_section width*이미지 개수 */
             width: 7600px;
             /* width: 7600%; */
@@ -269,17 +270,17 @@
             animation: slide 15s infinite;
         }
 
-        @keyframes slide {
-            0% {margin-left:0;} /* 0 ~ 10  : 정지 */
-            10% {margin-left:0;} /* 10 ~ 25 : 변이 */
-            25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
-            35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+        /* @keyframes slide {
+            0% {margin-left:0;} 
+            10% {margin-left:0;} 
+            25% {margin-left:-100%;}
+            35% {margin-left:-100%;} 
             50% {margin-left:-200%;}
             60% {margin-left:-200%;}
             75% {margin-left:-300%;}
             85% {margin-left:-300%;}
             100% {margin-left:0;}
-        }
+        } */
 
         #left_btn {
             /* border: 1px solid black; */
@@ -378,6 +379,8 @@
             height: 600px;
         }
 
+        /* 슬라이더 버튼 */
+
 
 
 
@@ -385,55 +388,15 @@
 
     </style>
 
-    <!-- jquery import -->
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 
-    <script>
-        // js 
-        // 제품정보 > 하위메뉴 클릭시 펼침 (부드럽게)
-        // $(document).ready(function(){
-        //     $("#top_menu_1").click(function(){
-        //         var submenu = $(this).next("ol");
-        //         if(submenu.is(":visible")){
-        //             submenu.slideUp(300);
-        //         }else{
-        //             submenu.slideDown(300);
-        //         }
-        //     });
-        // });
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 슬라이더 라이브러리 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-        // $(document).ready(function(){
-        //     $("#top_menu_1").click(function(){
-        //         alert('click');
-        //         $("#sub_menu").show();
-        //     });
-        // });
+    <!-- <script src="..\resources\jquery-3.5.1.js"></script> -->
 
-        // 딱딱 나옴!
-        $(function(){
-            $('#sub_menu').hide();
-            $('#top_menu_1').click(function(){
-                $('#sub_menu').toggle();
-            });
-        });
-
-
-
-        // $(document).ready(function(){
-        //     $("#top_menu_1").click(function(){
-        //         var submenu = $(this).next("ol");
-        //         if(submenu.is(":visible")){
-        //         $(this).next("ol").toggleClass("display");
-        //         }else{
-        //         $(this).next("ol").toggleClass("display");
-        //         }
-        //     });
-        // });
-
-        
- 
-
-    </script>    
 
 </head>
 <body>
@@ -472,7 +435,7 @@
 
         <!-- 슬라이드 섹션 시작 -->
         <div id="slide_section">
-            <div id="slide_imgs">
+            <div class="slide_imgs">
             <!-- <div class="slider"> -->
                 <!-- <div id="left_btn"><img src="..\images\left_btn.png" id="left_btn_img"></div> -->
                 <div><img src="..\images\ex1_1.png" id="slide_img1" class="slide_img"></div>
@@ -517,6 +480,65 @@
     </div>
 
 
+    <!-- jquery import -->
+    <!-- <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script> -->
+
+    <script type="text/javascript">
+        
+
+        // js 
+        // 제품정보 > 하위메뉴 클릭시 펼침 (부드럽게)
+        // $(document).ready(function(){
+        //     $("#top_menu_1").click(function(){
+        //         var submenu = $(this).next("ol");
+        //         if(submenu.is(":visible")){
+        //             submenu.slideUp(300);
+        //         }else{
+        //             submenu.slideDown(300);
+        //         }
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //     $("#top_menu_1").click(function(){
+        //         alert('click');
+        //         $("#sub_menu").show();
+        //     });
+        // });
+
+        // 딱딱 나옴!
+        $(function(){
+            $('#sub_menu').hide();
+            $('#top_menu_1').click(function(){
+                $('#sub_menu').toggle();
+            });
+        });
+
+
+
+        // $(document).ready(function(){
+        //     $("#top_menu_1").click(function(){
+        //         var submenu = $(this).next("ol");
+        //         if(submenu.is(":visible")){
+        //         $(this).next("ol").toggleClass("display");
+        //         }else{
+        //         $(this).next("ol").toggleClass("display");
+        //         }
+        //     });
+        // });
+
+
+        // 슬라이더
+        $('.slide_imgs').slick({
+         slidesToShow : 1,
+         slidesToScroll : 1,
+         autoplay : true,
+         autoplaySpeed : 3000,
+      });
+        
+ 
+
+    </script>    
 
 
 </body>
