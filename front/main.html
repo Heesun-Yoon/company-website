@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet"> -->
 
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-    
+
 
     <!--   
         수정사항
@@ -260,6 +260,7 @@
         #slide_imgs {
             /* #slide_section width*이미지 개수 */
             width: 7600px;
+            /* width: 7600%; */
             /* opacity: 0.8; */
             position: relative;
             display: flex;
@@ -328,10 +329,10 @@
         }
 
         /* 각 이미지의 width는 #slide_section width와 같아야함 */
-        /* .slide_img {
-            max-width: 1700px;
+        .slide_img {
+            max-width: 7600px;
             height: auto;
-        } */
+        }
 
         #images_section1 {
             padding-left: 30px;
@@ -376,6 +377,8 @@
             width: 1000px;
             height: 600px;
         }
+
+
 
 
 
@@ -427,7 +430,8 @@
         //     });
         // });
 
-
+        
+ 
 
     </script>    
 
@@ -469,13 +473,17 @@
         <!-- 슬라이드 섹션 시작 -->
         <div id="slide_section">
             <div id="slide_imgs">
-                <div id="left_btn"><img src="..\images\left_btn.png" id="left_btn_img"></div>
-                <img src="..\images\ex1_1.png" id="slide_img1" class="slide_img">
-                <img src="..\images\ex2_1.png" id="slide_img2" class="slide_img">
-                <img src="..\images\ex3_1.png" id="slide_img3" class="slide_img">
-                <img src="..\images\ex4_1.png" id="slide_img4" class="slide_img">
-                <div id="right_btn"><img src="..\images\right_btn.png" id="right_btn_img"></div> 
+            <!-- <div class="slider"> -->
+                <!-- <div id="left_btn"><img src="..\images\left_btn.png" id="left_btn_img"></div> -->
+                <div><img src="..\images\ex1_1.png" id="slide_img1" class="slide_img"></div>
+                <div><img src="..\images\ex2_1.png" id="slide_img2" class="slide_img"></div>
+                <div><img src="..\images\ex3_1.png" id="slide_img3" class="slide_img"></div>
+                <div><img src="..\images\ex4_1.png" id="slide_img4" class="slide_img"></div> 
+                <!-- <div id="right_btn"><img src="..\images\right_btn.png" id="right_btn_img"></div>  -->
             </div>
+
+
+
         <!-- 슬라이드 섹션 끝 -->
         </div>
 
@@ -507,5 +515,9 @@
 
     <!-- 전체 레이아웃 끝 -->
     </div>
+
+
+
+
 </body>
 </html>
