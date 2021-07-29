@@ -20,9 +20,11 @@
         1. 하위메뉴 animation으로 부드럽게 수정
         2. images_section1 디자인 변경
         3. 슬라이드 쇼 내 글자 (사진 조금 더 뿌옇게)
-        4. 슬라이드 쇼 내 양쪽 화살표 및 하단 동그라미 (하나만 한다면 화살표)
+        4. 슬라이드 쇼 내 양쪽 화살표 및 하단 동그라미 (하나만 한다면 화살표) 
+            >> 화살표 및 하단 점 완료
         5. 슬라이드 쇼 마지막 사진 -> 첫번째 사진 넘어갈 때 앞으로 넘어오지 말기
             - 라이브러리 사용
+            >> 완료
         6. 반응형 
      -->
 
@@ -340,14 +342,21 @@
         }
 
         .images_sec {
-            border: 3px solid black;
-            width: 380px;
-            height: 500px;
-            margin: 60px 50px 0 30px;
+            border: 1px solid #aaa;
+            border-radius: 500px;
+            width: 300px;
+            height: 300px;
+            margin: 3% 3% 0 5%;
             cursor: pointer;
         }
 
-        .images_sec:hover {
+        .images_sec > img {
+            border-radius: 500px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .images_sec > img:hover {
             transform: scale(1.1);
             transition: transform 1s;
         }
@@ -449,6 +458,21 @@
         }
 
 
+        .images_sec .img_title {
+            border-bottom: 2px solid #aaa;
+            width: 200px;
+            text-align: center;
+            margin: 15% auto 10% auto;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding-bottom: 3%;
+        }
+
+        .images_sec .img_content {
+            /* border: 1px solid black; */
+        }
+
+
 
 
 
@@ -519,10 +543,26 @@
 
         <!-- 이미지 섹션1 시작 -->
         <div id="images_section1">
-            <div id="img_sec_1" class="images_sec"><img src="..\images\color1.png"></div>
-            <div id="img_sec_2" class="images_sec"><img src="..\images\color2.png"></div>
-            <div id="img_sec_3" class="images_sec"><img src="..\images\color3.png"></div>
-            <div id="img_sec_4" class="images_sec"><img src="..\images\color4.png"></div>
+            <div id="img_sec_1" class="images_sec">
+                <img src="..\images\color1.png">
+                <div class="img_title">UV실사유리</div>
+                <div class="img_content">우리여보 안녕! 내사랑! 우리여보! 지금은 새벽 2시9분입니당. 내사랑 보고싶은 밤이에요</div>
+            </div>
+            <div id="img_sec_2" class="images_sec">
+                <img src="..\images\color2.png">
+                <div class="img_title">유리대리석</div>
+                <div class="img_content">안녕우리여보 히히 향숙이는 열심히 작업쭈웅</div>
+            </div>
+            <div id="img_sec_3" class="images_sec">
+                <img src="..\images\color3.png">
+                <div class="img_title">거울</div>
+                <div class="img_content">졸리구 배는안고프구 여보는 보고싶어요 언능 주말돼서 보고싶어요</div>
+            </div>
+            <div id="img_sec_4" class="images_sec">
+                <img src="..\images\color4.png">
+                <div class="img_title">유리칠판</div>
+                <div class="img_content">이것만 후딱 하구 빨리 자야지 내사랑 항상 고맙구 사랑하고 많이많이 보고싶어요</div>
+            </div>
         <!-- 이미지 섹션1 끝 -->
         </div>
 
