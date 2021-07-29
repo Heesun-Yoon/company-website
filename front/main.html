@@ -84,7 +84,7 @@
         }
 
         #slide_section {
-            border: 5px solid #aaa;
+            /* border: 5px solid #aaa; */
             /* background-color: #bbb; */
             display: flex;
             flex: 0.20;
@@ -407,23 +407,47 @@
 
         /* previous 버튼 */
         #slide_section > .slick-dotted > button[aria-label="Previous"] {
-            top: 30%;
+            top: 40%;
         }
 
         /* next 버튼 */
         #slide_section > .slick-dotted > button[aria-label="Next"] {
-            top: 30%;
+            top: 40%;
             left: 92.8%;
         }
 
 
+        /* 슬라이드쇼 내 점 (ul) */
+        .slick-dots {
+            width: 30%;
+            list-style: none;
+            position: absolute;
+            top: 90%;
+            left: 43%;
+        }
 
-/* 
-        #slide_section > .slick-dotted > .slick-arrow::after {
-            content: "";
-            display: block;
-            clear: both;
-        } */
+        .slick-dots > li {
+            width: 100px;
+            /* border: 1px solid white; */
+            width: 5%;
+            height: 2%;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .slick-dots > li > button {
+            width: 10px;
+            height: 10px;
+            outline: none;
+            border: 0;
+            border-radius: 100px;
+            background-color: white;
+            cursor: pointer;
+            color: white;
+        }
+
 
 
 
@@ -586,6 +610,12 @@
             $('#slide_section > .slick-dotted > button[aria-label="Previous"]').html('<');
             $('#slide_section > .slick-dotted > button[aria-label="Next"]').html('>');
         });
+
+        //슬라이더 하단 점 text
+        $(document).ready(function(){
+            $('.slick-dots > li > button').html('');
+        });
+
         
             // var i = $('#slide_section > .slick-dotted > button[aria-label="Previous"]').text();
             // alert(i);
