@@ -84,7 +84,7 @@
         }
 
         #slide_section {
-            /* border: 1px solid #aaa; */
+            border: 5px solid #aaa;
             /* background-color: #bbb; */
             display: flex;
             flex: 0.20;
@@ -385,6 +385,46 @@
             outline: none;
         }
 
+        /* previous, next 화살표 */
+        #slide_section > .slick-dotted > .slick-arrow {
+            width: 7%;
+            height: 15%;
+            cursor: pointer;
+            z-index: 1;
+            position: absolute;
+            background-color: transparent;
+            outline: none;
+            border: 0;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        
+        .slide_img {
+            position: relative;
+        }
+
+        /* previous 버튼 */
+        #slide_section > .slick-dotted > button[aria-label="Previous"] {
+            top: 30%;
+        }
+
+        /* next 버튼 */
+        #slide_section > .slick-dotted > button[aria-label="Next"] {
+            top: 30%;
+            left: 92.8%;
+        }
+
+
+
+/* 
+        #slide_section > .slick-dotted > .slick-arrow::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+
 
 
 
@@ -539,8 +579,16 @@
          autoplaySpeed : 3000,
          dots : true,
       });
+
+
+        //슬라이더 좌우 버튼 text
+        $(document).ready(function(){
+            $('#slide_section > .slick-dotted > button[aria-label="Previous"]').html('<');
+            $('#slide_section > .slick-dotted > button[aria-label="Next"]').html('>');
+        });
         
- 
+            // var i = $('#slide_section > .slick-dotted > button[aria-label="Previous"]').text();
+            // alert(i);
 
     </script>    
 
