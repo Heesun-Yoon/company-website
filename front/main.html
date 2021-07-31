@@ -149,7 +149,8 @@
             border: 1px solid #aaa;
             /* background-color: #fff; */
             display: flex;
-            flex: 0.08;
+            /* flex: 0.08; */
+            flex: 0.15;
         }
 
         @media(max-width:768px){
@@ -499,6 +500,90 @@
         }
 
 
+        /* footer */
+        #footer_left_menu {
+            /* border: 1px solid black; */
+            /* background-color: #eee; */
+            /* display: flex;
+            flex: 0.5;
+            flex-direction: row; */
+            width: 50%;
+        }
+
+        #footer_left_menu #footer_logo {
+            /* border: 1px solid black; */
+            width: 250px;
+            height: 150px;
+            margin: 4% 0 0 35%;
+        }
+
+
+        #footer_info1,
+        #footer_info2 {
+            /* border: 1px solid black; */
+            width: 40%;
+            height: 8%;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 2% 0 0 33%;
+        }
+
+        #footer_info{
+            border: 1px solid black;
+            /* width: 500px;
+            height: 400px; */
+        }
+
+        .footer_info_txt {
+            /* border: 3px solid red; */
+            display: inline-block;
+            width: 150px;
+            /* text-align: right; */
+            margin-right: 10px;
+            border: 1px solid #E4E4E4;
+            border-radius: 10px;
+            background-color: #E4E4E4;
+            /* border-bottom: 2px solid #D9D9D9; */
+            /* margin-bottom: 5px; */
+            /* padding: 5px; */
+        }
+
+        #footer_right_menu {
+            /* border: 1px solid black; */
+            width: 50%;
+            background-color: #eee;
+        }
+
+
+        .footer_right_content {
+            /* border: 2px solid red; */
+            width: 60%;
+            height: 10%;
+            margin: 2% 0 1% 10%;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        #footer_right_content1 {
+            margin-top: 50px;
+        }
+
+
+        .footer_right_content > img {
+            /* border: 1px solid black; */
+            width: 5%;
+            padding: 1%;
+            margin-right: 2%;
+        }
+
+        .footer_right_content > div {
+            display: inline-block;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 15%;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
 
 
 
@@ -610,6 +695,40 @@
 
         <!-- footer 시작 -->
         <footer>
+            <!-- 좌측 부분 시작-->
+            <div id="footer_left_menu">
+                <img src="..\images\logo.png" id="footer_logo">
+                <!-- <span id="footer_info"> -->
+                    <div id="footer_info1"><span class="footer_info_txt">상호명</span>제이에스글라스</div>
+                    <div id="footer_info2"><span class="footer_info_txt">사업자등록번호</span>787-63-00271</div>
+                <!-- </span> -->
+            <!-- 좌측 부분 끝 -->
+            </div>
+
+            <!-- 우측 부분 시작 -->
+            <div id="footer_right_menu">
+                <div class="footer_right_content" id="footer_right_content1">
+                    <img src="../images/tel.png">
+                    <div>031-962-0903</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/fax.png">
+                    <div>031-962-0904</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/mail.png">
+                    <div>jsglass0703@naver.com</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/factory.png">
+                    <div>제1공장: 경기도 고양시 덕양구 서오릉로 716번길 47-9</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/factory.png">
+                    <div>제2공장: 경기도 고양시 덕양구 서오릉로 716번길 47-13</div>
+                </div>
+            <!-- 우측 부분 끝 -->
+            </div>
         <!-- footer 끝 -->
         </footer>
 
