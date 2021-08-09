@@ -789,9 +789,22 @@
         $(function(){
             $('#sub_menu').hide();
             $('#top_menu_1').click(function(){
+                event.stopPropagation();
                 $('#sub_menu').toggle();
             });
         });
+
+        
+
+        // 메뉴 외 다른 곳 클릭 시 메뉴접기
+        $('#top_menu_1').click(function(event){
+            event.stopPropagation();
+        });
+
+        $(document).on("click",function() {
+            $("#sub_menu").hide();
+        })
+
 
 
 
