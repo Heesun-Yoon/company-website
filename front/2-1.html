@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2-1 page</title>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 
     <style>
+        /* 폰트 (나눔스퀘어) */
+        .nanumsquare {
+            font-family: 'NanumSquare', sans-serif !important;
+        }
 
         html,body {
             margin: 0;
@@ -18,7 +23,7 @@
 
         #wrap {
             width: 100%;
-            height: 600%;
+            height: 1000%;
             /* background-color: beige; */
             display: flex;
             flex-direction: column;
@@ -163,13 +168,14 @@
         }
 
         #section2 {
-            /* border: 1px solid black; */
+            border-bottom: 3px solid #aaa;
             width: 70%;
             height: 30%;
             display: flex;
-            flex: 0.12;
+            flex: 0.07;
             /* background-color: beige; */
             margin: 0 auto;
+            margin-bottom: 1%;
         }
 
         .section2_imgs {
@@ -182,13 +188,389 @@
         .section2_imgs:hover {
             transform: scale(1.15);
             transition: transform 1s;
+            cursor: pointer;
         }
+
+        #section3 {
+            border-bottom: 3px solid #aaa;
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex: 0.07;
+            margin: 0 auto;
+            padding: 1% 0 1% 0;
+        }
+
+        .section3_imgs {
+            width: 100%;
+        }
+
+
+        #section4 {
+            border-bottom: 3px solid #aaa;
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex: 0.1;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-bottom: 1%;
+        }
+
+        #section4_top {
+            width: 100%;
+            height: 45%;
+            /* background-color: #977d7d; */
+            margin: 0 auto;
+        }
+
+        .section4_imgs_top {
+            width: 30%;
+            height: 80%;
+            margin: 3% 0.5% 3% 2%;
+        }
+
+        #section4_bottom {
+            width: 100%;
+            height: 55%;
+            /* background-color: #aaa; */
+            margin: 0 auto;
+        }
+
+        .section4_imgs_bottom {
+            width: 30%;
+            height: 90%;
+            margin: 2% 0.5% 3% 2%;
+        }
+
+        #section5 {
+            border-bottom: 3px solid #aaa;
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex: 0.1;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #section6 {
+            border-bottom: 3px solid #aaa;
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex: 0.07;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 1% 0 1% 0;
+        }
+
+        .section6_imgs {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        #slide_section {
+            margin-bottom: 3px solid #aaa;
+            display: flex;
+            flex: 0.07;
+            margin: 2% 0 2% 0;
+        }
+
+        .slide_imgs {
+            /* #slide_section width*이미지 개수 */
+            width: 70%;
+            /* width: 7600%; */
+            /* opacity: 0.8; */
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            margin: 0 auto;
+            /* animation: slide 15s infinite; */
+        }
+
+        /* 이미지 크기 반응형 */
+        .slide_img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            /* opacity: 0.9; */
+        }
+
+        /* 각 이미지의 width는 #slide_section width와 같아야함 */
+        .slide_img {
+            max-width: 100%;
+            height: 700px;
+        }
+
+
+        /* 슬라이더 버튼 */
+        .slick-prev slick-arrow ,
+        .slick-next slick-arrow{
+            outline: none;
+        }
+
+        /* previous, next 화살표 */
+        #slide_section > .slick-dotted > .slick-arrow {
+            width: 7%;
+            height: 15%;
+            cursor: pointer;
+            z-index: 1;
+            position: absolute;
+            background-color: transparent;
+            outline: none;
+            border: 0;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        
+        .slide_img {
+            position: relative;
+        }
+
+        /* previous 버튼 */
+        #slide_section > .slick-dotted > button[aria-label="Previous"] {
+            top: 40%;
+        }
+
+        /* next 버튼 */
+        #slide_section > .slick-dotted > button[aria-label="Next"] {
+            top: 40%;
+            left: 92.8%;
+        }
+
+
+        /* 슬라이드쇼 내 점 (ul) */
+        .slick-dots {
+            width: 30%;
+            list-style: none;
+            position: absolute;
+            top: 90%;
+            left: 43%;
+        }
+
+        .slick-dots > li {
+            width: 100px;
+            /* border: 1px solid white; */
+            width: 5%;
+            height: 2%;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .slick-dots > li > button {
+            width: 10px;
+            height: 10px;
+            outline: none;
+            border: 0;
+            border-radius: 100px;
+            background-color: white;
+            cursor: pointer;
+            color: white;
+        }
+
+
+        .images_sec .img_title{
+            border-bottom: 2px solid #aaa;
+            width: 200px;
+            text-align: center;
+            margin: 15% auto 10% auto;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding-bottom: 3%;
+        }
+
+
+        /* #test_txt {
+            position: absolute;
+            width: 50%;
+            margin: 0 0 0 2%;
+            top: 30%;
+            color: white;
+            font-size: 5em;
+            z-index: 1;
+        }
+
+        
+        #test_txt2 {
+            position: absolute;
+            width: 50%;
+            margin: 0 0 0 2%;
+            top: 50%;
+            color: white;
+            font-size: 2em;
+            z-index: 1;
+        } */
+
+        #section8 {
+            border-top: 3px solid #aaa;
+            border-bottom: 3px solid #aaa;
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex: 0.09;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 1% 0 3% 0;
+        }
+
+        .section8_imgs {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+
+        #section9 {
+            border-bottom: 3px solid #aaa;
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex: 0.1;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 1% 0 1% 0;
+        }
+
+        .section9_imgs {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+
+        #section10 {
+            /* border-bottom: 3px solid #aaa; */
+            width: 70%;
+            height: 30%;
+            display: flex;
+            flex: 0.14;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 1% 0 1% 0;
+        }
+
+        #section10_title {
+            border-bottom: 2px solid black;
+            width: 56%;
+            margin: 3% 0 0 10%;
+            font-size: 2.5em;
+            padding-bottom: 0.5%;
+            position: absolute;
+            font-weight: bold;
+            left: 12%;
+        }
+
+        #section10_sub {
+            /* border: 1px solid red; */
+            width: 250px;
+            font-size: 2.5em;
+            color: #D9D9D9;
+            position: relative;
+            top: 0;
+            left: 69%;
+        }
+
+        #section10_img_boxs {
+            /* border: 1px solid black; */
+            width: 80%;
+            height: 87%;
+            position: relative;
+            top: 3%;
+            left: 10%;
+            overflow: hidden;
+        }
+
+        .section10_imgs {
+            /* border: 1px solid black; */
+            width: 30%;
+            height: 45%;
+            display: inline-block;
+            margin: 2% 1% 1% 1%;
+        }
+
+        .section10_imgs:nth-child(1),
+        .section10_imgs:nth-child(4){
+            margin-left: 2%;
+        }
+
+
+        .section10_imgs_title {
+            border-bottom: 2px solid #aaa;
+            width: 100%;
+            display: inline-block;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 2%;
+        }
+
+        
+        .section10_imgs_sub {
+            /* border: 1px solid black; */
+            width: 100%;
+            height: 22%;
+            display: inline-block;
+            overflow: hidden;
+            line-height: 1.5em;
+        }
+
+        .section10_imgs_sub:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+
+        .section10_imgs > div {
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 60%;
+            background-image: url("../images/2-1_section10_1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 3%;
+
+        }
+
+        /* .section10_imgs > div > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+
+        #more_btn {
+            border: 1px solid #aaa;
+            border-radius: 8%;
+            background-color: #f0f0f0;
+            width: 15%;
+            height: 4%;
+            text-align: center;
+            margin-left: 82%;
+            margin-top: -3%;
+            color: black;
+            line-height: 3;
+        }
+
+        #more_btn:hover {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+
 
 
         /* footer */
         footer {
+            border-top: 3px solid #aaa;
             display: flex;
-            flex: 0.06;
+            flex: 0.03;
         }
 
 
@@ -322,42 +704,117 @@
 
         <!-- section3 시작 -->
         <div id="section3">
-            
+            <img src="..\images\2-1_section3_1.png" id="section3_img1" class="section3_imgs">
         <!-- section3 끝 -->
         </div>
 
         <!-- section4 시작 -->
         <div id="section4">
+            <div id="section4_top">
+                <img src="..\images\2-1_section4_1.png" id="section4_img1" class="section4_imgs_top">
+                <img src="..\images\2-1_section4_2.png" id="section4_img2" class="section4_imgs_top">
+                <img src="..\images\2-1_section4_3.png" id="section4_img3" class="section4_imgs_top">
+            </div>  
+            <div id="section4_bottom">
+                <img src="..\images\2-1_section4_4.png" id="section4_img4" class="section4_imgs_bottom">
+                <img src="..\images\2-1_section4_5.png" id="section4_img5" class="section4_imgs_bottom">
+                <img src="..\images\2-1_section4_6.png" id="section4_img6" class="section4_imgs_bottom">
+            </div>
         <!-- section4 끝 -->
         </div>
 
         <!-- section5 시작 -->
         <div id="section5">
+            <img src="..\images\2-1_section5_1.png" id="section5_img1" class="section5_imgs">
         <!-- section5 끝 -->
         </div>
 
         <!-- section6 시작 -->
         <div id="section6">
+            <img src="..\images\2-1_section6_1.png" id="section6_img1" class="section6_imgs">
         <!-- section6 끝 -->
         </div>
 
-        <!-- section7 시작 -->
-        <div id="section7">
+        <!-- section7 시작 (슬라이드쇼) -->
+        <div id="slide_section">
+            <div class="slide_imgs">
+                <!-- <div class="slider"> -->
+                    <!-- <div id="left_btn"><img src="..\images\left_btn.png" id="left_btn_img"></div> -->
+                    <div>
+                        <img src="..\images\ex1_1.png" id="slide_img1" class="slide_img">
+                        <!-- <div id="test_txt">JS Glass</div>
+                        <div id="test_txt2">마음까지 사로잡는 특별한 광고</div> -->
+                    </div>
+                    <div><img src="..\images\ex2_1.png" id="slide_img2" class="slide_img"></div>
+                    <div><img src="..\images\ex3_1.png" id="slide_img3" class="slide_img"></div>
+                    <div><img src="..\images\ex4_1.png" id="slide_img4" class="slide_img"></div> 
+                    <!-- <div id="right_btn"><img src="..\images\right_btn.png" id="right_btn_img"></div>  -->
+                </div>
         <!-- section7 끝 -->
         </div>
 
         <!-- section8 시작 -->
         <div id="section8">
+            <img src="..\images\2-1_section8_1.png" id="section8_img1" class="section8_imgs">
         <!-- section8 끝 -->
         </div>
 
         <!-- section9 시작 -->
         <div id="section9">
+            <img src="..\images\2-1_section9_1.png" id="section9_img1" class="section9_imgs">
         <!-- section9 끝 -->
         </div>
 
         <!-- section10 시작 -->
         <div id="section10">
+            <div id="section10_title">시공갤러리</div>
+            <div id="section10_sub">UV-PRINTING GLASS WALL</div>
+            <div id="section10_img_boxs">
+                <div class="section10_imgs">
+                    <div>
+                        <!-- <img src="..\images\2-1_section10_1.png" id="section10_img1" class="section10_imgs"> -->
+                    </div>
+                    <span class="section10_imgs_title">시공갤러리 제목1</span>
+                    <span class="section10_imgs_sub">시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!</span>
+                </div>
+
+                <div class="section10_imgs">
+                    <div>
+                        <!-- <img src="..\images\2-1_section10_1.png" id="section10_img1" class="section10_imgs"> -->
+                    </div>
+                    <span class="section10_imgs_title">시공갤러리 제목1</span>
+                    <span class="section10_imgs_sub">시공갤러리 설명칸 입니다!</span>
+                </div>
+                <div class="section10_imgs">
+                    <div>
+                        <!-- <img src="..\images\2-1_section10_1.png" id="section10_img1" class="section10_imgs"> -->
+                    </div>
+                    <span class="section10_imgs_title">시공갤러리 제목1</span>
+                    <span class="section10_imgs_sub">시공갤러리 설명칸 입니다!</span>
+                </div>
+                <div class="section10_imgs">
+                    <div>
+                        <!-- <img src="..\images\2-1_section10_1.png" id="section10_img1" class="section10_imgs"> -->
+                    </div>
+                    <span class="section10_imgs_title">시공갤러리 제목1</span>
+                    <span class="section10_imgs_sub">시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!시공갤러리 설명칸 입니다!</span>
+                </div>
+                <div class="section10_imgs">
+                    <div>
+                        <!-- <img src="..\images\2-1_section10_1.png" id="section10_img1" class="section10_imgs"> -->
+                    </div>
+                    <span class="section10_imgs_title">시공갤러리 제목1</span>
+                    <span class="section10_imgs_sub">시공갤러리 설명칸 입니다!</span>
+                </div>
+                <div class="section10_imgs">
+                    <div>
+                        <!-- <img src="..\images\2-1_section10_1.png" id="section10_img1" class="section10_imgs"> -->
+                    </div>
+                    <span class="section10_imgs_title">시공갤러리 제목1</span>
+                    <span class="section10_imgs_sub">시공갤러리 설명칸 입니다!</span>
+                </div>
+                <div id="more_btn">더보기</div>
+            </div>
         <!-- section10 끝 -->
         </div>
 
@@ -425,6 +882,27 @@
         $(document).on("click",function() {
             $("#sub_menu").hide();
         })
+
+        // 슬라이더
+        $('.slide_imgs').slick({
+         slidesToShow : 1,
+         slidesToScroll : 1,
+         autoplay : true,
+         autoplaySpeed : 3000,
+         dots : true,
+      });
+
+
+        //슬라이더 좌우 버튼 text
+        $(document).ready(function(){
+            $('#slide_section > .slick-dotted > button[aria-label="Previous"]').html('<');
+            $('#slide_section > .slick-dotted > button[aria-label="Next"]').html('>');
+        });
+
+        //슬라이더 하단 점 text
+        $(document).ready(function(){
+            $('.slick-dots > li > button').html('');
+        });
 
     </script>
     
