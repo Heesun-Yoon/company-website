@@ -111,7 +111,7 @@
             /* border: 1px solid #aaa; */
             /* background-color: #ccc; */
             display: flex;
-            flex: 0.22;
+            flex: 0.24;
         }
 
         @media(max-width:768px){
@@ -123,15 +123,21 @@
         }
 
         #images_section2 {
-            /* border: 1px solid #aaa; */
+            /* border-bottom: 3px solid #aaa; */
             /* background-color: #ddd; */
             display: flex;
-            flex: 0.25;
-            background-image: url("../images/section2.png");
+            flex: 0.19;
+            background-image: url("../images/main_sec3_img1.png");
             background-repeat: no-repeat;
-            background-size: contain;
+            /* background-size: contain; */
+            background-position: 50%;
+            background-size: cover;
             width: 100%;
             height: 100vh;
+
+            /* 1900*700 주면 이 속성 적용 */
+            /* flex: 0.28;
+            background-position: 50%; */
         }
 
         @media(max-width:768px){
@@ -146,7 +152,14 @@
             /* border: 1px solid #aaa; */
             /* background-color: #eee; */
             display: flex;
-            flex: 0.22;
+            flex: 0.19;
+            background-image: url("../images/main_sec4_img1.png");
+            background-repeat: no-repeat;
+            /* background-size: contain; */
+            background-size: cover;
+            background-position: 50%;
+            width: 100%;
+            height: 100vh;
         }
 
         @media(max-width:768px){
@@ -162,7 +175,7 @@
             /* background-color: #fff; */
             display: flex;
             /* flex: 0.08; */
-            flex: 0.15;
+            flex: 0.13;
         }
 
         @media(max-width:768px){
@@ -280,7 +293,7 @@
         }
 
         #slide_section{
-            width: 1900px;
+            /* width: 1900px; */
         }
 
         .slide_imgs {
@@ -350,13 +363,14 @@
             /* opacity: 0.9; */
         }
 
-        .slide_img:hover{
+        /* .slide_img:hover{
             opacity: initial;
-        }
+        } */
 
         /* 각 이미지의 width는 #slide_section width와 같아야함 */
         .slide_img {
-            max-width: 7600px;
+            /* max-width: 7600px; */
+            max-width: 100%;
             height: 800px;
         }
 
@@ -369,7 +383,7 @@
             border-radius: 500px;
             width: 300px;
             height: 300px;
-            margin: 2% 3% 0 5%;
+            margin: 5% 3% 0 5%;
             cursor: pointer;
         }
 
@@ -664,13 +678,13 @@
             <!-- <div class="slider"> -->
                 <!-- <div id="left_btn"><img src="..\images\left_btn.png" id="left_btn_img"></div> -->
                 <div>
-                    <img src="..\images\ex1_1.png" id="slide_img1" class="slide_img">
-                    <div id="test_txt">JS Glass</div>
-                    <div id="test_txt2">마음까지 사로잡는 특별한 광고</div>
+                    <img src="..\images\main_slide_img1_2.png" id="slide_img1" class="slide_img">
+                    <!-- <div id="test_txt">JS Glass</div>
+                    <div id="test_txt2">마음까지 사로잡는 특별한 광고</div> -->
                 </div>
-                <div><img src="..\images\ex2_1.png" id="slide_img2" class="slide_img"></div>
-                <div><img src="..\images\ex3_1.png" id="slide_img3" class="slide_img"></div>
-                <div><img src="..\images\ex4_1.png" id="slide_img4" class="slide_img"></div> 
+                <div><img src="..\images\main_slide_img2_2.png" id="slide_img2" class="slide_img"></div>
+                <div><img src="..\images\main_slide_img3_2.png" id="slide_img3" class="slide_img"></div>
+                <div><img src="..\images\main_slide_img4_2.png" id="slide_img4" class="slide_img"></div> 
                 <!-- <div id="right_btn"><img src="..\images\right_btn.png" id="right_btn_img"></div>  -->
             </div>
 
@@ -682,37 +696,37 @@
         <!-- 이미지 섹션1 시작 -->
         <div id="images_section1">
             <div id="img_sec_1" class="images_sec">
-                <img src="..\images\color1.png">
+                <img src="..\images\main_sec2_img1.png">
                 <div class="img_title">UV실사유리</div>
-                <div class="img_content"> akjdfkadf dfasdfadfdsaf</div>
+                <div class="img_content">UV 잉크로 유리면에 다이렉트 출력되어 표현의 한계없이 다양한 디자인이 가능합니다.</div>
             </div>
             <div id="img_sec_2" class="images_sec">
-                <img src="..\images\color2.png">
+                <img src="..\images\main_sec2_img2.png">
                 <div class="img_title">유리대리석</div>
-                <div class="img_content">adfasdfasdfasdfasdfadfasdfa</div>
+                <div class="img_content">실제 천연대리석 패턴을 유리에 인쇄하여 어느곳에 시공하여도 고급스럽고 깨끗합니다.</div>
             </div>
             <div id="img_sec_3" class="images_sec">
-                <img src="..\images\color3.png">
+                <img src="..\images\main_sec2_img3.png">
                 <div class="img_title">거울</div>
-                <div class="img_content">afdadfasdfasdfasdfasdfasdf</div>
+                <div class="img_content">최고급 국산 KS 은거울로 왜곡 없이 선명하며, 다양한 색상제작이 가능합니다.</div>
             </div>
             <div id="img_sec_4" class="images_sec">
-                <img src="..\images\color4.png">
+                <img src="..\images\main_sec2_img4.png">
                 <div class="img_title">유리칠판</div>
-                <div class="img_content">dfadfadfawfdafawdf</div>
+                <div class="img_content">내마모성과 내오염성이 뛰어나 반영구적으로 사용할 수있으며 필기감촉과 지움성이 탁월합니다. </div>
             </div>
         <!-- 이미지 섹션1 끝 -->
         </div>
 
         <!-- 이미지 섹션2 시작 -->
         <div id="images_section2">
-            <!-- <div id="img_sec2_1" class="images_sec2"><img src="..\images\section2.png"></div> -->
+            <!-- <div id="img_sec2_1" class="images_sec2"><img src="..\images\main_sec3_img1.png"></div> -->
         <!-- 이미지 섹션2 끝 -->
         </div>
 
         <!-- 이미지 섹션3 시작 -->
         <div id="images_section3">
-            <div id="img_sec3_1" class="images_sec3"><img src="..\images\section3.png"></div>
+            <!-- <div id="img_sec3_1" class="images_sec3"><img src="..\images\main_sec4_img1.png"></div> -->
         <!-- 이미지 섹션3 끝 -->
         </div>
 
