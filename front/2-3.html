@@ -29,40 +29,375 @@
             margin: 0 auto;
         }
 
+        
+        header {
+            /* border-bottom: 2px solid #004A98; */
+            /* border-bottom: 2px solid #003670; */
+            /* background-color: #F2F2F2; */
+            width: 100%;
+            display: flex;
+            flex: 0.04;
+            position: absolute;
+            /* position: fixed; */
+            background-color: #977d7d;
+            z-index: 1;
+            /* opacity: 0.6; */
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+
+        #logo {
+            width: 5%;
+            height: 1%;
+            /* 상 우 하 좌 */
+            margin: 8px 0px 8px 100px;
+        }
+
+        #top_menu {
+            /* border: 1px solid black; */
+            width: 83%;
+            height: 100%;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        #drop_down {
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+
+        #top_menu ul {
+            display: flex;
+            flex-direction: row;
+            height: 20%;
+            /* margin: 0; */
+            margin-left: 50%;
+            margin-top: 2%;
+            /* justify-content: space-evenly; */
+            justify-content: right;
+        }
+
+        #top_menu ul .top_menu_li{
+            /* border: 1px solid black; */
+            /* background-color: #eee; */
+            /* width: 12%; */
+            width: 20%;
+            height: 100%;
+            list-style: none;
+            font-size: 1.2em;
+            color: black;
+            line-height: 180%;
+            /* border-left: 2px solid #aaa; */
+            padding: 0 0 2px 7px;
+        }
+
+        #top_menu ul .top_menu_li > a{
+            border-left: 2px solid #4F4F4F;
+            padding: 0 0 2px 7px;
+        }
+
+         #top_menu ul .top_menu_li > a:hover {
+            font-weight: bold;
+            border-left: 3px solid black;
+            /* border-left: 3px solid #2F4C92; */
+        } 
+
+        #top_menu .top_menu_link,
+        #sub_menu .sub_menu_link {
+            text-decoration: none;
+            color: black;
+        }
+
+        #top_menu_1 {
+            position: relative;
+        }
+
+        /* 하위메뉴 ol */
+        #top_menu ul .top_menu_li #sub_menu {
+            border: 1px solid #eee;
+            width: 10%;
+            position: absolute;
+            top: 90%;
+            left: 54.3%;
+            list-style: none;
+            z-index: 1;
+            background-color: white;
+            padding: 10px;
+            background-color: #f0f0f0;
+            opacity: 0.9;
+        }
+
+
+
+
+        /* 하위메뉴 li */
+        #top_menu ul .top_menu_li #sub_menu li {
+            /* border: 3px solid red; */
+            width: 100%;
+            height: 20%;
+            margin-bottom: 3px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        #top_menu ul .top_menu_li #sub_menu .sub_menu_link:hover {
+            /* color: #003670;             */
+            color: black;
+            font-weight: bold;
+        }
+
+        #section1{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            /* flex: 0.3; */
+            /* border: 1px solid black; */
+        }
+
+        #section1_img {
+            width: 100%;
+        }
+
+        #section2 {
+            width: 70%;
+            display: flex;
+            flex: 0.1;
+            border-bottom: 3px solid #aaa;
+            margin: 0 auto;
+        }
+
+        #section3 {
+            width: 70%;
+            display: flex;
+            flex: 0.13  ;
+            border-bottom: 3px solid #aaa;
+            margin: 0 auto;
+            padding: 2% 0 2% 0;
+        }
+
+        #section4 {
+            width: 70%;
+            display: flex;
+            flex: 0.13;
+            border-bottom: 3px solid #aaa;
+            margin: 0 auto;
+            padding: 2% 0 2% 0;
+        }
+
+        #section5 {
+            width: 70%;
+            display: flex;
+            flex: 0.05;
+            border-bottom: 3px solid #aaa;
+            margin: 0 auto;
+            /* padding: 2% 0 2% 0; */
+        }
+
+        #section5_img {
+            width: 100%;
+        }
+
+        #section6 {
+            width: 70%;
+            display: flex;
+            flex: 0.3;
+            flex-direction: column;
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 2% 0 2% 0;
+            overflow: hidden;
+        }
+
+        #section6_title {
+            border: 1px solid black;
+            width: 100%;
+            height: 5%;
+            font-size: 2em;
+            line-height: 2;
+            padding-left: 5%;
+            background-color: rgba(255, 255, 255, 0.5);
+
+        }
+
+        #section7 {
+            width: 70%;
+            display: flex;
+            flex: 0.3;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        #section8 {
+            width: 70%;
+            display: flex;
+            flex: 0.3;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        #section9 {
+            width: 70%;
+            display: flex;
+            flex: 0.3;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+
+
+         /* footer */
+         footer {
+            border-top: 3px solid #aaa;
+            display: flex;
+            flex: 0.03;
+        }
+
+
+        #footer_left_menu {
+            width: 50%;
+        }
+
+        #footer_left_menu #footer_logo {
+            width: 250px;
+            height: 150px;
+            margin: 4% 0 0 35%;
+        }
+
+
+        #footer_info1 {
+            width: 40%;
+            height: 8%;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 4% 0 0 42%;
+        }
+
+        #footer_info{
+            border: 1px solid black;
+        }
+
+        .footer_info_txt {
+            display: inline-block;
+            width: 150px;
+            margin-right: 10px;
+            border-right: 5px solid #E4E4E4;
+        }
+
+        #footer_right_menu {
+            width: 50%;
+            background-color: #eee;
+        }
+
+
+        .footer_right_content {
+            width: 60%;
+            height: 10%;
+            margin: 2% 0 1% 10%;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        #footer_right_content1 {
+            margin-top: 50px;
+        }
+
+
+        .footer_right_content > img {
+            width: 5%;
+            padding: 1%;
+            margin-right: 2%;
+        }
+
+        .footer_right_content > div {
+            display: inline-block;
+            position: absolute;
+            top: 15%;
+            font-size: 1.1em;  
+            font-weight: bold;
+        }
+
+
     </style>
+
+        <!-- 제이쿼리 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- 슬라이더 라이브러리 -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
 </head>
 <body>
     <!-- 전체 레이아웃 시작 -->
     <div id="wrap">
+
+            <!-- 헤더 시작 -->
+            <header>
+                <!-- 로고 -->
+                <img src="..\images\logo.png" id="logo">
+                <!-- 상단메뉴 -->
+                <nav id="top_menu">
+                    <ul>
+                        <li class="top_menu_li"><a href="#" class="top_menu_link" id="top_menu_1">제품정보 
+                            <!-- <span id="drop_down">∨</span> -->
+                        </a>
+                            <!-- 제품정보 하위메뉴 -->
+                            <ol id="sub_menu">
+                                <li><a href="#" class="sub_menu_link">UV실사유리</a></li>
+                                <li><a href="#" class="sub_menu_link">유리대리석</a></li>
+                                <li><a href="#" class="sub_menu_link">UV칼라유리</a></li>
+                                <li><a href="#" class="sub_menu_link">백페인트글라스</a></li>
+                                <li><a href="#" class="sub_menu_link">거울</a></li>
+                                <li><a href="#" class="sub_menu_link">사틴유리</a></li>
+                                <li><a href="#" class="sub_menu_link">유리칠판</a></li>
+                            </ol>
+                        </li>
+                        <li class="top_menu_li"><a href="#" class="top_menu_link">시공갤러리</a></li>
+                        <li class="top_menu_li"><a href="#" class="top_menu_link">UV프린팅</a></li>
+                        <li class="top_menu_li"><a href="#" class="top_menu_link">문의</a></li>
+                        <li class="top_menu_li"><a href="#" class="top_menu_link">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            <!-- 헤더 끝 -->
+            </header>
+
         <!-- 첫번째 레이아웃 시작 -->
         <div id="section1">
+            <img src="..\images\2-3_section1.png" id="section1_img">
         <!-- 첫번째 레이아웃 끝 -->
         </div>
 
         <!-- 두번째 레이아웃 시작 -->
         <div id="section2">
+            <img src="..\images\2-3_section2.png" id="section2_img">
         <!-- 두번째 레이아웃 끝 -->
         </div>
 
         <!-- 세번째 레이아웃 시작 -->
         <div id="section3">
+            <img src="..\images\2-3_section3.png" id="section3_img">
         <!-- 세번째 레이아웃 끝 -->
         </div>
 
         <!-- 네번째 레이아웃 시작 -->
         <div id="section4">
+            <img src="..\images\2-3_section4.png" id="section4_img">
         <!-- 네번째 레이아웃 끝 -->
         </div>
 
         <!-- 다섯번째 레이아웃 시작 -->
         <div id="section5">
+            <img src="..\images\2-3_section5.png" id="section5_img">
         <!-- 다섯번째 레이아웃 끝 -->
         </div>
 
         <!-- 여섯번째 레이아웃 시작 -->
         <div id="section6">
+            <!-- 타이틀 -->
+            <div id="section6_title">사용용도</div>
+            <!-- 슬라이드 1 -->
+            <div id="Section6_slide1"></div>
+            <!-- 슬라이드 2 -->
+            <div id="Section6_slide2"></div>
         <!-- 여섯번째 레이아웃 끝 -->
         </div>
 
@@ -81,13 +416,76 @@
         <!-- 아홉번째 레이아웃 끝 -->
         </div>
 
-        <!-- 열번째 레이아웃 시작 -->
-        <div id="section10">
-        <!-- 열번째 레이아웃 끝 -->
-        </div>
+
+        <!-- footer 시작 -->
+        <footer>
+            <!-- 좌측 부분 시작-->
+            <div id="footer_left_menu">
+                <img src="..\images\logo.png" id="footer_logo">
+                    <div id="footer_info1">
+                        <!-- <span class="footer_info_txt">상호명</span> -->
+                        제이에스글라스</div>
+            <!-- 좌측 부분 끝 -->
+            </div>
+
+            <!-- 우측 부분 시작 -->
+            <div id="footer_right_menu">
+                <div class="footer_right_content" id="footer_right_content1">
+                    <img src="../images/tel.png">
+                    <div>031-962-0903</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/fax.png">
+                    <div>031-962-0904</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/mail.png">
+                    <div>jsglass0703@naver.com</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/factory.png">
+                    <div>제1공장: 경기도 고양시 덕양구 서오릉로 716번길 47-9</div>
+                </div>
+                <div class="footer_right_content">
+                    <img src="../images/factory.png">
+                    <div>제2공장: 경기도 고양시 덕양구 서오릉로 716번길 47-13</div>
+                </div>
+            <!-- 우측 부분 끝 -->
+            </div>
+        <!-- footer 끝 -->
+        </footer>
+    
 
 
     <!-- 전체 레이아웃 끝 -->
     </div>
+
+
+    <script>
+
+
+        // 딱딱 나옴!
+        $(function(){
+            $('#sub_menu').hide();
+            $('#top_menu_1').click(function(){
+                event.stopPropagation();
+                $('#sub_menu').toggle();
+            });
+        });
+
+        
+
+        // 메뉴 외 다른 곳 클릭 시 메뉴접기
+        $('#top_menu_1').click(function(event){
+            event.stopPropagation();
+        });
+
+        $(document).on("click",function() {
+            $("#sub_menu").hide();
+        })
+
+
+    </script>
+
 </body>
 </html>
